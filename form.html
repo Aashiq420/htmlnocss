@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      fieldset {
+        background-color: #0cebe3;
+      }
+
+      legend {
+        background-color: #0cebe3;
+        color: black;
+      }
+    </style>
+    <title>Forms Challenge</title>
+  </head>
+  <body bgcolor="#0cebe3">
+    <form action="">
+      <fieldset style="border: 1px solid #ff0000; width: 10px">
+        <legend>Customer Info</legend>
+        <br /><br />
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          name="name"
+          value=""
+          placeholder="Enter your name"
+          size="60"
+          autofocus
+          required
+        /><br /><br />
+
+        <label for="telephone">Telephone:</label><br />
+        <input
+          type="tel"
+          name="telephone"
+          value=""
+          placeholder="Pattern: 333-234-8910"
+          size="60"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
+        /><br /><br />
+
+        <label for="email">E-mail address</label><br />
+        <input
+          type="email"
+          name="email"
+          value=""
+          placeholder="Enter your email address"
+          size="60"
+          multiple
+          required
+        /><br /><br />
+      </fieldset>
+    </form>
+    <form action="">
+      <fieldset style="border: 1px solid #ff0000; width: 10px">
+        <legend>Books</legend>
+        <br />
+        <input list="books" name="book" id="book" size="55" />
+        <datalist id="books">
+          <option value="The Art of War"></option>
+          <option value="Newton's Principia"></option>
+          <option value="Relativity: The Special and General Theory"></option>
+          <option value="To Kill a Mockingbird"></option>
+          <option value="Great Gatsby"></option>
+        </datalist>
+        <br />
+        <label for="">Quantity (Maximum 5)</label>
+        <input type="number" value="" size="5" min="1" max="5" />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
